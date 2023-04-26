@@ -30,12 +30,18 @@ return packer.startup(function(use)
 	}
 
 	use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use { "catppuccin/nvim", as = "catppuccin" }
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 	use 'ThePrimeagen/harpoon'
 	use 'mbbill/undotree'
 	use 'tpope/vim-fugitive'
+
+    -- debug adaptor
     use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "theHamsta/nvim-dap-virtual-text", requires = {"mfussenegger/nvim-dap"} }
+    use "nvim-telescope/telescope-dap.nvim"
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
