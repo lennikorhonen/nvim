@@ -66,5 +66,8 @@ return packer.startup(function(use)
 		}
 	}
 
+    -- godot
+    use 'habamax/vim-godot'
+
     use 'famiu/bufdelete.nvim'
 end)

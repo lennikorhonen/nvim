@@ -203,6 +203,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lenni/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-godot"] = {
+    loaded = true,
+    path = "/home/lenni/.local/share/nvim/site/pack/packer/start/vim-godot",
+    url = "https://github.com/habamax/vim-godot"
   }
 }
 
