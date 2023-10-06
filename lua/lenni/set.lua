@@ -1,8 +1,9 @@
 local options = {
   backup = false,                          -- creates backup file if true
+  breakindent = true,
   clipboard = "unnamedplus",               -- access to system clipboard
   cmdheight = 2,
-  completeopt = { "menuone", "noselect" },
+  completeopt = 'menuone,noselect',
   conceallevel = 0,
   cc = '80',
   fileencoding = "utf-8",
@@ -19,7 +20,7 @@ local options = {
   splitright = true,
   swapfile = false,
   termguicolors = true,
-  timeoutlen = 1000,
+  timeoutlen = 300,
   undofile = true,
   updatetime = 50,
   writebackup = false,
@@ -39,12 +40,7 @@ local options = {
 
 vim.opt.shortmess:append "c"
 for k, v in pairs(options) do
-	vim.opt[k] = v
+  vim.opt[k] = v
 end
 
 vim.opt.isfname:append("@-@")
-
-vim.cmd "set whichwrap+=<,>,[,],h,l"
-vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set formatoptions-=cro]]
-vim.cmd "let g:astro_typescript='enable'"

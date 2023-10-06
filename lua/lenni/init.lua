@@ -1,3 +1,3 @@
-require("lenni.remap")
 require("lenni.set")
-require("lenni.packer")
+require("lenni.remap")
+require("lenni.lazy")

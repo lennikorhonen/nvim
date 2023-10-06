@@ -1,49 +1,63 @@
-local opts = { noremap = true, silent = true }
+-- Set <space> as the leader key
+-- See `:help mapleader`
+--  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-local keymap = vim.api.nvim_set_keymap
+-- [[ Basic Keymaps ]]
+local opts = { expr = true, silent = true }
 
--- leader sets
-keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+-- Keymaps for better default experience
+-- See `:help vim.keymap.set()`
+vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
 
--- File explorer
--- vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
-keymap("", "<leader>e", ":Lex 30<cr>", opts)
+-- Remap for dealing with word wrap
+vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", opts)
+vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", opts)
 
 -- Resize vim panels
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+vim.keymap.set("n", "<C-Up>", ":resize +2<CR>", opts)
+vim.keymap.set("n", "<C-Down>", ":resize -2<CR>", opts)
+vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Center cursor on jumps
-keymap("n", "<C-u>", "<C-u>zz", opts)
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "n", "nzzzv", opts)
-keymap("n", "N", "Nzzzv", opts)
+-- vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
+-- vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
+-- vim.keymap.set("n", "n", "nzzzv", opts)
+-- vim.keymap.set("n", "N", "Nzzzv", opts)
 
 -- buffer nav
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprev<CR>", opts)
-keymap("n", "<C-w>", ":Bdelete<CR>", opts)
+-- vim.keymap.set("n", "<S-l>", ":bnext<CR>", opts)
+-- vim.keymap.set("n", "<S-h>", ":bprev<CR>", opts)
+-- vim.keymap.set("n", "<C-w>", ":Bdelete<CR>", opts)
 
-keymap("i", "jk", "<ESC>", opts)
+vim.keymap.set("i", "jk", "<ESC>", opts)
 
-keymap("v", ">", ">gv", opts)
-keymap("v", "<", "<gv", opts)
+vim.keymap.set("v", ">", ">gv", opts)
+vim.keymap.set("v", "<", "<gv", opts)
 
-keymap("v", "<A-j>", ":m .+1<CR>==", opts)
-keymap("v", "<A-k>", ":m .-2<CR>==", opts)
-keymap("v", "p", '"_dP', opts)
+vim.keymap.set("v", "<A-j>", ":m .+1<CR>==", opts)
+vim.keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
+vim.keymap.set("v", "p", '"_dP', opts)
 
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
+vim.keymap.set("x", "J", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "K", ":move '<-2<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
+vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
-keymap("x", "<leader>p", "\"_dP", opts)
+vim.keymap.set("x", "<leader>p", "\"_dP", opts)
 
-keymap("n", "Q", "nop", opts)
-keymap("n", "<C-f>", "<cmd> silent !tmux neww tmux-sessionizer<CR>", opts)
+vim.keymap.set("n", "Q", "nop", opts)
+vim.keymap.set("n", "<C-f>", "<cmd> silent !tmux neww tmux-sessionizer<CR>", opts)
 
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
