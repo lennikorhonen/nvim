@@ -102,7 +102,7 @@ require('lazy').setup({
     'navarasu/onedark.nvim',
     priority = 1000,
     opts = {
-      transparent = true,
+      transparent = false,
     },
     config = function()
       vim.cmd.colorscheme 'onedark'
@@ -172,5 +172,10 @@ require('lazy').setup({
   { 'windwp/nvim-autopairs', opts = {} },
 
   'christoomey/vim-tmux-navigator',
+
+  {
+    "sourcegraph/sg.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+  },
 
 }, {})
