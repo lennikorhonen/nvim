@@ -97,18 +97,41 @@ require('lazy').setup({
     },
   },
 
+  -- Colors
   {
-    -- Theme inspired by Atom
+  --   -- Theme inspired by Atom
     'navarasu/onedark.nvim',
+  --   priority = 1000,
+  --   opts = {
+  --     transparent = false,
+  --   },
+  --   config = function()
+  --     vim.cmd.colorscheme 'onedark'
+  --     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+  --     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+  --   end,
+  },
+
+  {
+    'Shatur/neovim-ayu',
+    -- priority = 1000,
+    -- config = function()
+    --   vim.cmd.colorscheme 'ayu-light'
+    -- end,
+  },
+
+  {
+    'thimc/gruber-darker.nvim',
+    -- priority = 1000,
+    -- config = function()
+    --   vim.cmd.colorscheme 'gruber-darker'
+    -- end,
+  },
+
+  {
+    'ellisonleao/gruvbox.nvim',
     priority = 1000,
-    opts = {
-      transparent = false,
-    },
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-      vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-      vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-    end,
+    config = true
   },
 
   {
@@ -118,7 +141,7 @@ require('lazy').setup({
     opts = {
       options = {
         icons_enabled = false,
-        theme = 'onedark',
+        theme = 'auto',
         component_separators = '|',
         section_separators = '',
       },
@@ -167,7 +190,11 @@ require('lazy').setup({
     build = ':TSUpdate',
   },
 
-  'thePrimeagen/harpoon',
+  {
+    'thePrimeagen/harpoon',
+    branch = "harpoon2",
+    dependencies = "nvim-lua/plenary.nvim",
+  },
 
   { 'windwp/nvim-autopairs', opts = {} },
 
