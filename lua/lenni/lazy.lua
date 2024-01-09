@@ -130,8 +130,17 @@ require('lazy').setup({
 
   {
     'ellisonleao/gruvbox.nvim',
+    -- priority = 1000,
+    -- config = true
+  },
+
+  {
+    'Mofiqul/vscode.nvim',
     priority = 1000,
-    config = true
+  },
+
+  {
+    'tjdevries/colorbuddy.nvim'
   },
 
   {

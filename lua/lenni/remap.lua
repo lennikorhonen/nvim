@@ -49,7 +49,7 @@ vim.keymap.set("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 vim.keymap.set("x", "<leader>p", [["_dP]], opts)
 
 vim.keymap.set("n", "Q", "nop", opts)
-vim.keymap.set("n", "<C-f>", "<cmd> silent !tmux neww tmux-sessionizer<CR>", opts)
+-- vim.keymap.set("n", "<C-f>", "<cmd> silent !tmux neww tmux-sessionizer<CR>", opts)
 
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
