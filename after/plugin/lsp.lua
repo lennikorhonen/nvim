@@ -76,6 +76,27 @@ local servers = {
       telemetry = { enable = false },
     },
   },
+  intelephense = {
+    environment = {
+      includePaths = {
+        "/Users/lennikorhonen/coding/pupesoft_ahkio"
+      },
+      phpVersion = "8.2",
+    },
+    format = {
+      braces = "k&r",
+    },
+    files = {
+      maxSize = 2000000,
+      associations = {
+        {"*.inc", "php"},
+        {"*.module", "php"},
+      },
+    },
+    telemetry = {
+      enabled = false,
+    }
+  },
 }
 
 -- Setup neovim lua configuration
