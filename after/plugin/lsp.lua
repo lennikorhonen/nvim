@@ -97,6 +97,8 @@ local servers = {
       enabled = false,
     }
   },
+  tsserver = {},
+  eslint = {},
 }
 
 -- Setup neovim lua configuration

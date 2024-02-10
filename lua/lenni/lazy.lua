@@ -113,22 +113,6 @@ require('lazy').setup({
   },
 
   {
-    'Shatur/neovim-ayu',
-    -- priority = 1000,
-    -- config = function()
-    --   vim.cmd.colorscheme 'ayu-light'
-    -- end,
-  },
-
-  {
-    'thimc/gruber-darker.nvim',
-    -- priority = 1000,
-    -- config = function()
-    --   vim.cmd.colorscheme 'gruber-darker'
-    -- end,
-  },
-
-  {
     'ellisonleao/gruvbox.nvim',
     -- priority = 1000,
     -- config = true
@@ -136,6 +120,16 @@ require('lazy').setup({
 
   {
     'Mofiqul/vscode.nvim',
+    priority = 1000,
+  },
+
+  {
+    'Mofiqul/dracula.nvim',
+    priority = 1000,
+  },
+
+  {
+    'folke/tokyonight.nvim',
     priority = 1000,
   },
 
