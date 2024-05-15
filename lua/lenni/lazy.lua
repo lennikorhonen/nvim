@@ -97,19 +97,13 @@ require('lazy').setup({
     },
   },
 
+  { 'folke/zen-mode.nvim', opts = {} },
+
   -- Colors
   {
   --   -- Theme inspired by Atom
     'navarasu/onedark.nvim',
-  --   priority = 1000,
-  --   opts = {
-  --     transparent = false,
-  --   },
-  --   config = function()
-  --     vim.cmd.colorscheme 'onedark'
-  --     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-  --     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-  --   end,
+    priority = 1000,
   },
 
   {
@@ -130,6 +124,12 @@ require('lazy').setup({
 
   {
     'folke/tokyonight.nvim',
+    priority = 1000,
+  },
+
+  {
+    'catppuccin/nvim',
+    name = 'catppuccin',
     priority = 1000,
   },
 
@@ -202,6 +202,8 @@ require('lazy').setup({
   { 'windwp/nvim-autopairs', opts = {} },
 
   'christoomey/vim-tmux-navigator',
+
+  {'stevearc/oil.nvim', opts = {}},
 
   {
     "sourcegraph/sg.nvim",
