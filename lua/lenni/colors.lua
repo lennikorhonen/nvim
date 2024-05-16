@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 require('catppuccin').setup({
 
 })
@@ -14,4 +15,9 @@ local theme = 'catppuccin'
 local command = "colorscheme %s"
 
 vim.cmd(string.format(command, theme))
+=======
+require('tokyonight').setup()
+
+vim.cmd("colorscheme tokyonight-moon")
+>>>>>>> Stashed changes
 

@@ -51,6 +51,8 @@ vim.keymap.set("x", "<leader>p", [["_dP]], opts)
 vim.keymap.set("n", "Q", "nop", opts)
 -- vim.keymap.set("n", "<C-f>", "<cmd> silent !tmux neww tmux-sessionizer<CR>", opts)
 
+-- Fix copilot error
+vim.g.copilot_assume_mapped = true
 -- [[ Highlight on yank ]]
 -- See `:help vim.highlight.on_yank()`
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })

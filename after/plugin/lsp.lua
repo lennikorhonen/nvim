@@ -89,8 +89,7 @@ local servers = {
     files = {
       maxSize = 2000000,
       associations = {
-        {"*.inc", "php"},
-        {"*.module", "php"},
+        {"*.php", "php"},
       },
     },
     telemetry = {

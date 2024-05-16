@@ -64,6 +64,9 @@ require('lazy').setup({
     },
   },
 
+  -- ZenMode
+  { 'folke/zen-mode.nvim', opts = {} },
+
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
   {
@@ -128,9 +131,13 @@ require('lazy').setup({
   },
 
   {
+<<<<<<< Updated upstream
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
+=======
+    "ayu-theme/ayu-vim",
+>>>>>>> Stashed changes
   },
 
   {
@@ -208,6 +215,10 @@ require('lazy').setup({
   {
     "sourcegraph/sg.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
+  },
+
+  {
+    'github/copilot.vim'
   },
 
 }, {})
