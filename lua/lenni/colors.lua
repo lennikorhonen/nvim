@@ -1,10 +1,9 @@
-<<<<<<< Updated upstream
-require('catppuccin').setup({
-
-})
+-- require('catppuccin').setup({
+--
+-- })
 
 -- vim.o.background = 'light'
-local theme = 'catppuccin'
+-- local theme = 'catppuccin'
 
 -- local datetime = os.date("*t")
 
@@ -12,12 +11,10 @@ local theme = 'catppuccin'
 --   theme = 'catppuccin'
 -- end
 
-local command = "colorscheme %s"
-
-vim.cmd(string.format(command, theme))
-=======
+-- local command = "colorscheme %s"
+--
+-- vim.cmd(string.format(command, theme))
 require('tokyonight').setup()
 
 vim.cmd("colorscheme tokyonight-moon")
->>>>>>> Stashed changes
 

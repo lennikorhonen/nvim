@@ -131,13 +131,12 @@ require('lazy').setup({
   },
 
   {
-<<<<<<< Updated upstream
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-=======
+  },
+  {
     "ayu-theme/ayu-vim",
->>>>>>> Stashed changes
   },
 
   {
