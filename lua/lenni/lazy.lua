@@ -121,11 +121,6 @@ require('lazy').setup({
   },
 
   {
-    'Mofiqul/dracula.nvim',
-    priority = 1000,
-  },
-
-  {
     'folke/tokyonight.nvim',
     priority = 1000,
   },
@@ -134,9 +129,6 @@ require('lazy').setup({
     'catppuccin/nvim',
     name = 'catppuccin',
     priority = 1000,
-  },
-  {
-    "ayu-theme/ayu-vim",
   },
 
   {
@@ -156,15 +148,6 @@ require('lazy').setup({
       },
     },
   },
-
-  -- {
-  --   -- Add indentation guides even on blank lines
-  --   'lukas-reineke/indent-blankline.nvim',
-  --   -- Enable `lukas-reineke/indent-blankline.nvim`
-  --   -- See `:help indent_blankline.txt`
-  --   main = "ibl",
-  --   opts = {},
-  -- },
 
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
@@ -211,13 +194,8 @@ require('lazy').setup({
 
   {'stevearc/oil.nvim', opts = {}},
 
-  {
-    "sourcegraph/sg.nvim",
-    dependencies = { "nvim-lua/plenary.nvim", "nvim-telescope/telescope.nvim" },
-  },
-
-  {
-    'github/copilot.vim'
-  },
+  -- {
+  --   'github/copilot.vim'
+  -- },
 
 }, {})

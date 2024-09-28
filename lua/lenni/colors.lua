@@ -1,20 +1,6 @@
--- require('catppuccin').setup({
---
--- })
+-- require('gruvbuddy').setup()
 
--- vim.o.background = 'light'
--- local theme = 'catppuccin'
+-- vim.cmd("colorscheme tokyonight-moon")
 
--- local datetime = os.date("*t")
-
--- if datetime.hour >= 18 then
---   theme = 'catppuccin'
--- end
-
--- local command = "colorscheme %s"
---
--- vim.cmd(string.format(command, theme))
-require('tokyonight').setup()
-
-vim.cmd("colorscheme tokyonight-moon")
+vim.cmd("colorscheme gruvbuddy")
 
