@@ -104,7 +104,7 @@ require('lazy').setup({
 
   -- Colors
   {
-  --   -- Theme inspired by Atom
+    -- Theme inspired by Atom
     'navarasu/onedark.nvim',
     priority = 1000,
   },
@@ -133,6 +133,12 @@ require('lazy').setup({
 
   {
     'tjdevries/colorbuddy.nvim'
+  },
+
+  {
+    'sainnhe/everforest',
+    name = 'everforest',
+    priority = 1000,
   },
 
   {

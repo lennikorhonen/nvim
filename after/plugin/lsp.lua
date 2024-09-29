@@ -101,6 +101,11 @@ local servers = {
   },
   -- tsserver = {},
   eslint = {},
+
+  elixirls = {
+    cmd = { "/home/lenni/.local/share/nvim/mason/bin/elixir-ls" },
+    root_dir = require("lspconfig.util").root_pattern { "mix.exs" },
+  },
 }
 
 -- Setup neovim lua configuration

@@ -2,5 +2,5 @@
 
 -- vim.cmd("colorscheme tokyonight-moon")
 
-vim.cmd("colorscheme gruvbuddy")
+vim.cmd("colorscheme everforest")
 
